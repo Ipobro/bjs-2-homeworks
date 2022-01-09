@@ -18,6 +18,12 @@ function solveEquation(a, b, c) {
 
 function calculateTotalMortgage(percent, contribution, amount, date) {
   
+  let s = 50000;
+  let n = 12;
+  let p = percent / 100 / 12;
+  let annuityPayment = s * (p + (p / (Math.pow(1 + p, n) - 1)));
+  let finishSumm = annuityPayment * n;
+
   if (percent = NaN) {
     return `Параметр "Процентная ставка" содержит неправильное значение "${percent}"`;
   } else if (contribution = NaN) {
@@ -26,8 +32,7 @@ function calculateTotalMortgage(percent, contribution, amount, date) {
     return `Параметр "Общая стоимость" содержит неправильное значение "${amount}"`;
   }
   
-
-
+  console.log(finishSumm);
 };
 
 
