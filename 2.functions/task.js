@@ -2,7 +2,13 @@
 function getArrayParams(arr) {
   let min, max, sum, avg;
 
-  // Ваш код
+  //let minFunc = () => Math.min();
+  //let maxFunc = () => Math.max();
+  //let sum = () / arr.length;
+
+  for (i = 0; i < arr.length; i++) {
+   
+  }
 
   return { min: min, max: max, avg: avg };
 }
