@@ -1,17 +1,21 @@
 // Задание 1
 function getArrayParams(arr) {
-  let min, max, sum, avg;
 
-  //let minFunc = () => Math.min();
-  //let maxFunc = () => Math.max();
-  //let sum = () / arr.length;
+  let min = (Math.min(...arr));
+  let max = (Math.max(...arr));
+  let sum = 0;
 
-  for (i = 0; i < arr.length; i++) {
-   
-  }
+  for (i = 0; i < arr.length; i++) { 
+    
+    sum += arr[i];
+
+  };
+
+  let avg = Number((sum / arr.length).toFixed(2));
 
   return { min: min, max: max, avg: avg };
-}
+};
+
 
 // Задание 2
 function worker(arr) {
