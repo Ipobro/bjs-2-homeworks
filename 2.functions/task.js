@@ -45,5 +45,13 @@ function makeWork(arrOfArr, func) {
 
 // Задание 3
 function worker2(arr) {
-  // Ваш код
+
+  let min = Math.min(...arr);
+
+  let max = Math.max(...arr);
+
+  let abs = Math.abs(min - max);
+
+  return abs;
+
 }
