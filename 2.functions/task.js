@@ -18,14 +18,15 @@ function getArrayParams(arr) {
 
 
 // Задание 2
+
 function worker(arr) {
   
-  let sum = arr.reduce(function(a, b) {
-    return a + b;
-  });
+  function worker(arr) {
 
-  return sum;
-}
+    return arr.reduce((a, b) => a + b);
+    
+  };
+};
 
 function makeWork(arrOfArr, func) {
 
@@ -41,17 +42,16 @@ function makeWork(arrOfArr, func) {
   return max;
 };
 
-//makeWork([[1, 2, 3, 4], [10, 20, -10, -20]], worker(arr));
+//makeWork([[1, 2, 3, 4], [10, 20, -10, -20]], worker());
 
 // Задание 3
+
 function worker2(arr) {
 
   let min = Math.min(...arr);
 
   let max = Math.max(...arr);
 
-  let abs = Math.abs(min - max);
+  return Math.abs(min - max);
 
-  return abs;
-
-}
+};
