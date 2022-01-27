@@ -20,27 +20,42 @@ function getArrayParams(arr) {
 // Задание 2
 
 function worker(arr) {
-  
-  function worker(arr) {
 
-    return arr.reduce((a, b) => a + b);
-    
-  };
+  let sum = 0;
+
+  for (i = 0; i < arr.length; i++) {
+
+    sum += arr[i];
+  }
+
+  return sum;
+
 };
 
 function makeWork(arrOfArr, func) {
 
-  let max = 0;  
-  
+  let max = arrOfArr[0];
+  let sumFunc = 0;
 
   for (i = 0; i < arrOfArr.length; i++) {
-    if (max < func(arrOfArr[i])) {
-      max = sum;
-    }
+    
+    sumFunc = func(arrOfArr[i]);
+
+    if (max > sumFunc) {
+      
+      max = func(arrOfArr[i]);
+
+    };
+
+
   };
 
   return max;
+
 };
+
+//console.log(makeWork([[1, 2, 3], [4, 5, 6]], worker));
+
 
 //makeWork([[1, 2, 3, 4], [10, 20, -10, -20]], worker());
 
